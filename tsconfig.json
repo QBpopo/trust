@@ -40,5 +40,10 @@
 		"noUncheckedSideEffectImports": true,
 		"moduleDetection": "force",
 		"skipLibCheck": true,
+
+		// +2
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
+		"allowJs": true,
 	}
 }
