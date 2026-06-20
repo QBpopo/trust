@@ -1,6 +1,4 @@
-import type { StrictFunction, StrictConstructor, Instance, Replace } from "./types/types.ts";
-
-export type GenParam = StrictConstructor;
+import type { StrictFunction, StrictConstructor, Instance, Replace, Trait } from "./lib.ts";
 
 declare const self: unique symbol;
 export type Self = { readonly [self]: never };
@@ -26,9 +24,7 @@ export type Impl = <T>(trait: Trait<T>) => {
 	for_self: <S extends StrictConstructor>(struct: S, methods: Methods<S, T>) => void;
 };
 
-export type Trait<_T> = {};
-
-export const impl: Impl = trait => ({
+export const impl: Impl = _trait => ({
 	for(struct, associations) {
 		Object.assign(struct, associations);
 	},
