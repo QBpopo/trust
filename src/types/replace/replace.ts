@@ -1,3 +1,8 @@
+import type { ReplaceFuncs } from "./funcs.ts";
+export * from "./funcs.ts";
+import type { ReplaceCtors } from "./ctors.ts";
+export * from "./ctors.ts";
+
 export type Replace<T, Old, New>
 	= T extends Old ? New
 	: T extends Function ? ReplaceFn<T, Old, New>
@@ -20,6 +25,6 @@ export type ReplaceCtor<T, Old, New> = T extends new (...args: infer Args) => in
 	: unknown;
 
 export type ReplaceFn<T, Old, New>
-	= & ReplaceFunc<T, Old, New>
-		& ReplaceCtor<T, Old, New>
+	= & ReplaceFuncs<T, Old, New>
+		& ReplaceCtors<T, Old, New>
 		& Omit<ReplaceKV<T, Old, New>, keyof Function>;
