@@ -7,7 +7,7 @@
 
 In **Safe** Rust, there is ultimately only one syntax for instantiating a struct: the **field struct expression**.
 
-```Rust
+```rust
 struct Position {
 	pub x: f64,
 	pub y: f64,
@@ -23,7 +23,7 @@ let pos = Position {
 
 In TypeScript, we can do it this way:
 
-```TypeScript
+```typescript
 type Position = {
 	x: number;
 	y: number;
@@ -39,7 +39,7 @@ const p: Position = {
 
 Or we can do it this way:
 
-```TypeScript
+```typescript
 class Position {
 	x: number;
 	y: number;
@@ -66,7 +66,7 @@ Rust 采用*名义类型系统*，所以 `Position` 与 `Velocity` 不是同一�
 
 Rust adopts a *nominal type system*, meaning `Position` and `Velocity` are treated as distinct types:
 
-```Rust
+```rust
 struct Position { pub x: f64, pub y: f64, }
 
 struct Velocity { pub x: f64, pub y: f64, }
@@ -76,7 +76,7 @@ TypeScript 采用*结构化类型系统*，所以 `Position` 和 `Velocity` 其�
 
 TypeScript, on the other hand, utilizes a *structural type system*, which makes `Position` and `Velocity` entirely equivalent types:
 
-```TypeScript
+```typescript
 type Position = { x: number; y: number };
 
 type Velocity = { x: number; y: number };
@@ -86,7 +86,7 @@ type Velocity = { x: number; y: number };
 
 Even when using a class, as long as they are structurally compatible:
 
-```TypeScript
+```typescript
 class Foo { }
 
 class Bar { }
@@ -102,7 +102,7 @@ However, at this point, we can already perform a runtime comparison like `Foo ==
 
 But once both classes have private fields, whether using TypeScript's `private` modifier or JavaScript's native private field syntax, even if the private fields have exactly the same name, an error will occur:
 
-```TypeScript
+```typescript
 class Foo { private val = 0; }
 
 class Bar { private val = 0; }
@@ -110,7 +110,7 @@ class Bar { private val = 0; }
 const a: Foo = new Bar(); // error: Type 'Bar' is not assignable to type 'Foo'.
 ```
 
-```TypeScript
+```typescript
 class Foo { #val = 0; }
 
 class Bar { #val = 0; }
