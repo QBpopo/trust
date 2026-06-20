@@ -1,4 +1,4 @@
-import type { Fields } from "../src/types.ts";
+import type { Fields } from "../src/types/types.ts";
 
 class Position {
 	x: number;
