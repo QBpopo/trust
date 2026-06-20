@@ -45,5 +45,6 @@
 		"allowImportingTsExtensions": true,
 		"noEmit": true,
 		"allowJs": true,
-	}
+	},
+	"exclude": [ "tmp", "*.tmp", "scripts", ],
 }
