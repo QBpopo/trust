@@ -1,4 +1,4 @@
-export type * from "./replace.ts";
+export type * from "./replace/replace.ts";
 
 type Unwrap<T> = T extends Number ? number
 	: T extends String ? string
