@@ -16,4 +16,4 @@ export interface Default {
 
 export const Default = (): Trait<Default> => 0;
 
-export type fn_default<T extends StrictConstructor> = Associations<T, Default>["default"];
+export type FnDefault<T extends StrictConstructor> = Associations<T, Default>["default"];

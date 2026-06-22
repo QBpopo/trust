@@ -20,5 +20,5 @@ export interface Clone {
 
 export const Clone = (): Trait<Clone> => 0;
 
-export type fn_clone<T extends StrictConstructor> = Methods<T, Clone>["clone"];
-export type fn_clone_from<T extends StrictConstructor> = Methods<T, Clone>["clone_from"];
+export type FnClone<T extends StrictConstructor> = Methods<T, Clone>["clone"];
+export type FnCloneFrom<T extends StrictConstructor> = Methods<T, Clone>["clone_from"];
