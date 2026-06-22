@@ -1,5 +1,6 @@
-import type { StrictConstructor, Self, Methods } from "../lib.ts";
-import type { Trait } from "./trait.ts";
+import type { Self, Methods } from "@";
+import type { StrictConstructor } from "@/types";
+import type { Trait } from "@/trait";
 
 // see <https://doc.rust-lang.org/std/clone/trait.Clone.html>
 

@@ -1,7 +1,4 @@
-import type { StrictConstructor } from "../lib.ts";
-
-export * from "./clone.ts";
-export * from "./default.ts";
+import type { StrictConstructor } from "@/types";
 
 export type GenParam = StrictConstructor;
 

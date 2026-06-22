@@ -45,6 +45,12 @@
 		"allowImportingTsExtensions": true,
 		"noEmit": true,
 		"allowJs": true,
+		"paths": {
+			"@": [ "./src/lib.ts" ],
+			"@/trait": [ "./src/trait/trait.ts" ],
+			"@/trait/*": [ "./src/trait/*.ts" ],
+			"@/types": [ "./src/types/types.ts" ],
+		}
 	},
 	"exclude": [ "tmp", "*.tmp", "scripts", ],
 }

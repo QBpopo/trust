@@ -1,4 +1,5 @@
-import type { StrictFunction, StrictConstructor, Instance, Replace, Trait } from "./lib.ts";
+import type { StrictFunction, StrictConstructor, Instance, Replace } from "@/types";
+import type { Trait } from "@/trait";
 
 declare const self: unique symbol;
 export type Self = { readonly [self]: never };

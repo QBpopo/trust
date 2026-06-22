@@ -1,5 +1,6 @@
-import type { StrictConstructor, Struct, Self, Associations } from "../lib.ts";
-import type { Trait } from "./trait.ts";
+import type { Struct, Self, Associations } from "@";
+import type { StrictConstructor } from "@/types";
+import type { Trait } from "@/trait";
 
 // see <https://doc.rust-lang.org/std/default/trait.Default.html>
 
