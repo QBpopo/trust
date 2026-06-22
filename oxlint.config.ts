@@ -5,7 +5,11 @@ export default defineConfig({
 	categories: { correctness: "error" },
 	rules: {
 		"no-unused-vars": [
-			"warn", { fix: { imports: "off", variables: "off" } },
+			"warn", {
+				varsIgnorePattern: "^_",
+				argsIgnorePattern: "^_",
+				fix: { imports: "off", variables: "off" },
+			},
 		],
 	},
 	env: { builtin: true },

@@ -1,11 +1,13 @@
 export type * from "./replace/replace.ts";
 
+/* oxlint-disable no-wrapper-object-types */
 type Unwrap<T> = T extends Number ? number
 	: T extends String ? string
 	: T extends Boolean ? boolean
 	: T extends Symbol ? symbol
 	: T extends BigInt ? bigint
 	: T;
+/* oxlint-enable no-wrapper-object-types */
 
 export type StrictFunction<This = unknown, R = unknown> = (this: This, ...args: never) => R;
 
