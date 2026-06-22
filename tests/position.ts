@@ -1,5 +1,6 @@
-import { impl, Clone, Default } from "../src/lib.ts";
-import type { fn_clone, fn_clone_from, fn_default } from "../src/lib.ts";
+import { impl } from "@";
+import { Clone, type FnClone, type FnCloneFrom } from "@/trait/clone";
+import { Default, type FnDefault } from "@/trait/default";
 
 type PositionFields = {
 	x: number;
@@ -15,9 +16,9 @@ class Position {
 		this.y = pos.y;
 	}
 
-	declare clone: fn_clone<typeof Position>;
-	declare clone_from: fn_clone_from<typeof Position>;
-	declare static default: fn_default<typeof Position>;
+	declare clone: FnClone<typeof Position>;
+	declare clone_from: FnCloneFrom<typeof Position>;
+	declare static default: FnDefault<typeof Position>;
 }
 
 impl(Clone()).for_self(Position, {
